@@ -9,7 +9,7 @@
     tools:context=".setting">
 
     <TextView
-        android:id="@+id/textview_rounds"
+        android:id="@+id/textview_rounds_setting"
         android:layout_width="147dp"
         android:layout_height="52dp"
         android:text="TextView"
@@ -22,23 +22,8 @@
         app:layout_constraintVertical_bias="0.058"
         tools:text="ROUNDS" />
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/input_date_number"
-        android:layout_width="349dp"
-        android:layout_height="58dp"
-        android:hint="Enter a Date (M/DD/YYYY"
-        android:textColor="#FFFFFF"
-        android:textColorHighlight="#FFFFFF"
-        android:textColorHint="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.741"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.157" />
-
     <TextView
-        android:id="@+id/textview_studytime"
+        android:id="@+id/textview_studytime_setting"
         android:layout_width="205dp"
         android:layout_height="50dp"
         android:text="TextView"
@@ -52,7 +37,7 @@
         tools:text="STUDY TIME" />
 
     <TextView
-        android:id="@+id/textview_breaktime"
+        android:id="@+id/textview_breaktime_setting"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
@@ -66,7 +51,7 @@
         tools:text="BREAK TIME" />
 
     <TextView
-        android:id="@+id/textview_theme"
+        android:id="@+id/textview_theme_setting"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Theme"
@@ -80,7 +65,7 @@
         tools:text="THEME" />
 
     <Button
-        android:id="@+id/button_nextsetting"
+        android:id="@+id/button_nextsetting_setting"
         android:layout_width="106dp"
         android:layout_height="51dp"
         android:text="Button"
@@ -94,7 +79,7 @@
         tools:text="Next" />
 
     <Button
-        android:id="@+id/button_backsetting"
+        android:id="@+id/button_backsetting_setting"
         android:layout_width="112dp"
         android:layout_height="51dp"
         android:text="Button"
@@ -108,12 +93,12 @@
         tools:text="Back" />
 
     <SeekBar
-        android:id="@+id/seekbar_studytime"
+        android:id="@+id/seekbar_studytime_setting"
         style="@style/Widget.AppCompat.SeekBar.Discrete"
         android:layout_width="242dp"
         android:layout_height="36dp"
-        android:max="10"
-        android:progress="3"
+        android:max="6"
+        android:progress="13"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -122,7 +107,7 @@
         app:layout_constraintVertical_bias="0.333" />
 
     <SeekBar
-        android:id="@+id/seekbar_breaktime"
+        android:id="@+id/seekbar_breaktime_setting"
         style="@style/Widget.AppCompat.SeekBar.Discrete"
         android:layout_width="242dp"
         android:layout_height="36dp"
@@ -136,7 +121,7 @@
         app:layout_constraintVertical_bias="0.526" />
 
     <Spinner
-        android:id="@+id/spinner_rounds"
+        android:id="@+id/spinner_rounds_setting"
         android:layout_width="118dp"
         android:layout_height="54dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -147,7 +132,7 @@
         app:layout_constraintVertical_bias="0.057" />
 
     <Spinner
-        android:id="@+id/spinner_theme"
+        android:id="@+id/spinner_theme_setting"
         android:layout_width="300dp"
         android:layout_height="53dp"
         app:layout_constraintBottom_toBottomOf="parent"

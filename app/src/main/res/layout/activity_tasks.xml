@@ -2,13 +2,131 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/screen_tasks"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#606E87"
     tools:context=".Tasks">
 
+    <TextView
+        android:id="@+id/textview_task5_tasks"
+        android:layout_width="94dp"
+        android:layout_height="28dp"
+        android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.091"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.724"
+        tools:text="Task 5" />
+
+    <TextView
+        android:id="@+id/textview_task3_tasks"
+        android:layout_width="94dp"
+        android:layout_height="28dp"
+        android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.091"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.442"
+        tools:text="Task 3" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/input_task2_tasks"
+        android:layout_width="327"
+        android:layout_height="45"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:hint="Enter a task"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.376" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/input_task1_tasks"
+        android:layout_width="327dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:hint="Enter a task"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.236" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/input_task3_tasks"
+        android:layout_width="327"
+        android:layout_height="45"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:hint="Enter a task"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.517" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/input_task5_tasks"
+        android:layout_width="327"
+        android:layout_height="45"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:hint="Enter a task"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.806" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/input_task4_tasks"
+        android:layout_width="327"
+        android:layout_height="45"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:hint="Enter a task"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.658" />
+
+    <TextView
+        android:id="@+id/textview_task4_tasks"
+        android:layout_width="94dp"
+        android:layout_height="28dp"
+        android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.091"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.586"
+        tools:text="Task 4" />
+
     <Button
-        android:id="@+id/button_back"
+        android:id="@+id/button_back_tasks"
         android:layout_width="112dp"
         android:layout_height="51dp"
         android:text="Button"
@@ -22,7 +140,7 @@
         tools:text="Back" />
 
     <Button
-        android:id="@+id/button_next"
+        android:id="@+id/button_next_tasks"
         android:layout_width="106dp"
         android:layout_height="51dp"
         android:text="Button"
@@ -36,7 +154,7 @@
         tools:text="Next" />
 
     <TextView
-        android:id="@+id/textview_tasks"
+        android:id="@+id/textview_tasks_tasks"
         android:layout_width="224dp"
         android:layout_height="84dp"
         android:text="TextView"
@@ -46,7 +164,35 @@
         app:layout_constraintHorizontal_bias="0.155"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.061"
+        app:layout_constraintVertical_bias="0.024"
         tools:text="TASKS" />
+
+    <TextView
+        android:id="@+id/textview_task1_tasks"
+        android:layout_width="94dp"
+        android:layout_height="28dp"
+        android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.091"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.167"
+        tools:text="Task 1" />
+
+    <TextView
+        android:id="@+id/textview_task2_tasks"
+        android:layout_width="94dp"
+        android:layout_height="28dp"
+        android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.091"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.314"
+        tools:text="Task 2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

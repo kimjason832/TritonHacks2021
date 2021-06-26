@@ -9,7 +9,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textview_title"
+        android:id="@+id/textview_title_main"
         android:layout_width="272dp"
         android:layout_height="88dp"
         android:fontFamily="cursive"
@@ -25,7 +25,7 @@
         tools:text="Serene Study" />
 
     <Button
-        android:id="@+id/button_start"
+        android:id="@+id/button_start_main"
         android:layout_width="169dp"
         android:layout_height="51dp"
         android:text="Button"
