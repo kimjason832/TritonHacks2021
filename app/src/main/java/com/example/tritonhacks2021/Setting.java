@@ -5,12 +5,20 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.SeekBar;
+import android.widget.Spinner;
 
 public class Setting extends AppCompatActivity {
 
     Button nextButton;
     Button backButton;
+    Spinner roundsSpinner;
+    SeekBar studyTime;
+    SeekBar breakTime;
+    Spinner theme;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +26,17 @@ public class Setting extends AppCompatActivity {
 
         nextButton= findViewById(R.id.button_nextsetting_setting);
         backButton= findViewById(R.id.button_backsetting_setting);
+        roundsSpinner= findViewById(R.id.spinner_rounds_setting);
+        studyTime= findViewById(R.id.seekbar_studytime_setting);
+        breakTime=findViewById(R.id.seekbar_breaktime_setting);
+        theme=findViewById(R.id.spinner_theme_setting);
+
+        //setting the spinner
+        String[] roundsChoices={"1","2","3","4","5"};
+        ArrayAdapter aa=new ArrayAdapter(this, android.R.layout.simple_spinner_item,roundsChoices);
+        aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        roundsSpinner.setAdapter(aa);
+
 
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
