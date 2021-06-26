@@ -22,6 +22,21 @@
         app:layout_constraintVertical_bias="0.058"
         tools:text="ROUNDS" />
 
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/input_date_number"
+        android:layout_width="349dp"
+        android:layout_height="58dp"
+        android:hint="Enter a Date (M/DD/YYYY"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.741"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.157" />
+
     <TextView
         android:id="@+id/textview_studytime"
         android:layout_width="205dp"
