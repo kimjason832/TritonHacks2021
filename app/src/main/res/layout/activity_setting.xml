@@ -2,13 +2,14 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/screen_settings"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#606E87"
     tools:context=".setting">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textview_rounds"
         android:layout_width="147dp"
         android:layout_height="52dp"
         android:text="TextView"
@@ -22,7 +23,7 @@
         tools:text="ROUNDS" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textview_studytime"
         android:layout_width="205dp"
         android:layout_height="50dp"
         android:text="TextView"
@@ -36,7 +37,7 @@
         tools:text="STUDY TIME" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textview_breaktime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
@@ -50,7 +51,7 @@
         tools:text="BREAK TIME" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textview_theme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Theme"
@@ -64,7 +65,7 @@
         tools:text="THEME" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/button_nextsetting"
         android:layout_width="106dp"
         android:layout_height="51dp"
         android:text="Button"
@@ -78,7 +79,7 @@
         tools:text="Next" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/button_backsetting"
         android:layout_width="112dp"
         android:layout_height="51dp"
         android:text="Button"
@@ -92,7 +93,7 @@
         tools:text="Back" />
 
     <SeekBar
-        android:id="@+id/seekBar2"
+        android:id="@+id/seekbar_studytime"
         style="@style/Widget.AppCompat.SeekBar.Discrete"
         android:layout_width="242dp"
         android:layout_height="36dp"
@@ -106,24 +107,32 @@
         app:layout_constraintVertical_bias="0.333" />
 
     <SeekBar
-        android:id="@+id/seekBar3"
+        android:id="@+id/seekbar_breaktime"
         style="@style/Widget.AppCompat.SeekBar.Discrete"
         android:layout_width="242dp"
         android:layout_height="36dp"
         android:max="10"
         android:progress="3"
-        tools:layout_editor_absoluteX="84dp"
-        tools:layout_editor_absoluteY="365dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.526" />
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/spinner_rounds"
         android:layout_width="118dp"
         android:layout_height="54dp"
-        tools:layout_editor_absoluteX="240dp"
-        tools:layout_editor_absoluteY="38dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.853"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.057" />
 
     <Spinner
-        android:id="@+id/spinner2"
+        android:id="@+id/spinner_theme"
         android:layout_width="300dp"
         android:layout_height="53dp"
         app:layout_constraintBottom_toBottomOf="parent"
