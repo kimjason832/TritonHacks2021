@@ -9,7 +9,7 @@
     tools:context=".Timer">
 
     <TextView
-        android:id="@+id/textView_currenttask"
+        android:id="@+id/textview_currenttask_timer"
         android:layout_width="311dp"
         android:layout_height="83dp"
         android:text="Current Task"
@@ -23,30 +23,34 @@
         tools:text="Current Task" />
 
     <TextView
-        android:id="@+id/textView_currenttask2"
+        android:id="@+id/textview_othertask_timer"
         android:layout_width="324dp"
         android:layout_height="135dp"
         android:text="Other Tasks"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.609"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.82"
+        app:layout_constraintVertical_bias="0.79"
         tools:text="Other Tasks" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_skip_timer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Skip"
-        tools:layout_editor_absoluteX="53dp"
-        tools:layout_editor_absoluteY="320dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.164"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.468"
         tools:text="Skip" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/button_pause_timer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Pause"
@@ -59,7 +63,7 @@
         tools:text="Pause" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/button_reset_timer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="60dp"
@@ -72,7 +76,7 @@
         tools:text="Reset" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textview_motivationalquote_timer"
         android:layout_width="297dp"
         android:layout_height="55dp"
         android:text="Motivaltional Quote"
@@ -82,5 +86,31 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.582"
         tools:text="Motivaltional Quote" />
+
+    <Button
+        android:id="@+id/button_home_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.721"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.961"
+        tools:text="Home" />
+
+    <Button
+        android:id="@+id/button_back_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.226"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.961"
+        tools:text="Back" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
