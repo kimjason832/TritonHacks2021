@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class setting extends AppCompatActivity {
+public class Setting extends AppCompatActivity {
 
     Button nextButton;
     Button backButton;
@@ -22,14 +22,14 @@ public class setting extends AppCompatActivity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(setting.this, MainActivity.class);
+                Intent intent=new Intent(Setting.this, MainActivity.class);
                 startActivity(intent);
             }
         });
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(setting.this, Tasks.class);
+                Intent intent=new Intent(Setting.this, Timer.class);
                 startActivity(intent);
             }
         });
