@@ -17,7 +17,7 @@ public class Setting extends AppCompatActivity {
     Spinner roundsSpinner;
     SeekBar studyTime;
     SeekBar breakTime;
-    Spinner theme;
+    Spinner themeSpinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,13 +29,18 @@ public class Setting extends AppCompatActivity {
         roundsSpinner= findViewById(R.id.spinner_rounds_setting);
         studyTime= findViewById(R.id.seekbar_studytime_setting);
         breakTime=findViewById(R.id.seekbar_breaktime_setting);
-        theme=findViewById(R.id.spinner_theme_setting);
+        themeSpinner=findViewById(R.id.spinner_theme_setting);
 
         //setting the spinner
         String[] roundsChoices={"1","2","3","4","5"};
         ArrayAdapter aa=new ArrayAdapter(this, android.R.layout.simple_spinner_item,roundsChoices);
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         roundsSpinner.setAdapter(aa);
+
+        String[] themesChoices={"Christmas","Blizzard","Space","Spring","Forest"};
+        ArrayAdapter ab=new ArrayAdapter(this, android.R.layout.simple_spinner_item,themesChoices);
+        aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        themeSpinner.setAdapter(ab);
 
 
         backButton.setOnClickListener(new View.OnClickListener() {
