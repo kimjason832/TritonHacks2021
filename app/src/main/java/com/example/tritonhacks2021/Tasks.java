@@ -16,8 +16,8 @@ public class Tasks extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tasks);
 
-        nextButton= findViewById(R.id.button_next);
-        backButton= findViewById(R.id.button_back);
+        nextButton= findViewById(R.id.button_next_tasks);
+        backButton= findViewById(R.id.button_back_tasks);
 
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override

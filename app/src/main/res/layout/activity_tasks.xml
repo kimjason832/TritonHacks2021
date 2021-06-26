@@ -38,8 +38,8 @@
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/input_task2_tasks"
-        android:layout_width="327"
-        android:layout_height="45"
+        android:layout_width="327dp"
+        android:layout_height="45dp"
         android:layout_marginEnd="44dp"
         android:layout_marginRight="44dp"
         android:hint="Enter a task"
@@ -68,8 +68,8 @@
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/input_task3_tasks"
-        android:layout_width="327"
-        android:layout_height="45"
+        android:layout_width="327dp"
+        android:layout_height="45dp"
         android:layout_marginEnd="44dp"
         android:layout_marginRight="44dp"
         android:hint="Enter a task"
@@ -83,8 +83,8 @@
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/input_task5_tasks"
-        android:layout_width="327"
-        android:layout_height="45"
+        android:layout_width="327dp"
+        android:layout_height="45dp"
         android:layout_marginEnd="44dp"
         android:layout_marginRight="44dp"
         android:hint="Enter a task"
@@ -98,8 +98,8 @@
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/input_task4_tasks"
-        android:layout_width="327"
-        android:layout_height="45"
+        android:layout_width="327dp"
+        android:layout_height="45dp"
         android:layout_marginEnd="44dp"
         android:layout_marginRight="44dp"
         android:hint="Enter a task"
