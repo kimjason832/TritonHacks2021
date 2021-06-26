@@ -12,7 +12,7 @@
         android:id="@+id/textview_task5_tasks"
         android:layout_width="94dp"
         android:layout_height="28dp"
-        android:text="TextView"
+        android:text="Task 5"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,7 +26,7 @@
         android:id="@+id/textview_task3_tasks"
         android:layout_width="94dp"
         android:layout_height="28dp"
-        android:text="TextView"
+        android:text="Task 3"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,13 +43,15 @@
         android:layout_marginEnd="44dp"
         android:layout_marginRight="44dp"
         android:hint="Enter a task"
+        android:text="Enter a task"
         android:textColor="#FFFFFF"
         android:textColorHighlight="#FFFFFF"
         android:textColorHint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.376" />
+        app:layout_constraintVertical_bias="0.376"
+        tools:text="Enter a task" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/input_task1_tasks"
@@ -58,13 +60,15 @@
         android:layout_marginEnd="44dp"
         android:layout_marginRight="44dp"
         android:hint="Enter a task"
+        android:text="Enter a task"
         android:textColor="#FFFFFF"
         android:textColorHighlight="#FFFFFF"
         android:textColorHint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.236" />
+        app:layout_constraintVertical_bias="0.236"
+        tools:text="Enter a task" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/input_task3_tasks"
@@ -73,13 +77,15 @@
         android:layout_marginEnd="44dp"
         android:layout_marginRight="44dp"
         android:hint="Enter a task"
+        android:text="Enter a task"
         android:textColor="#FFFFFF"
         android:textColorHighlight="#FFFFFF"
         android:textColorHint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.517" />
+        app:layout_constraintVertical_bias="0.517"
+        tools:text="Enter a task" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/input_task5_tasks"
@@ -88,13 +94,15 @@
         android:layout_marginEnd="44dp"
         android:layout_marginRight="44dp"
         android:hint="Enter a task"
+        android:text="Enter a task"
         android:textColor="#FFFFFF"
         android:textColorHighlight="#FFFFFF"
         android:textColorHint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.806" />
+        app:layout_constraintVertical_bias="0.806"
+        tools:text="Enter a task" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/input_task4_tasks"
@@ -103,19 +111,21 @@
         android:layout_marginEnd="44dp"
         android:layout_marginRight="44dp"
         android:hint="Enter a task"
+        android:text="Enter a task"
         android:textColor="#FFFFFF"
         android:textColorHighlight="#FFFFFF"
         android:textColorHint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.658" />
+        app:layout_constraintVertical_bias="0.658"
+        tools:text="Enter a task" />
 
     <TextView
         android:id="@+id/textview_task4_tasks"
         android:layout_width="94dp"
         android:layout_height="28dp"
-        android:text="TextView"
+        android:text="Task 4"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -129,7 +139,7 @@
         android:id="@+id/button_back_tasks"
         android:layout_width="112dp"
         android:layout_height="51dp"
-        android:text="Button"
+        android:text="Back"
         app:backgroundTint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -143,7 +153,7 @@
         android:id="@+id/button_next_tasks"
         android:layout_width="106dp"
         android:layout_height="51dp"
-        android:text="Button"
+        android:text="Next"
         app:backgroundTint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -157,7 +167,7 @@
         android:id="@+id/textview_tasks_tasks"
         android:layout_width="224dp"
         android:layout_height="84dp"
-        android:text="TextView"
+        android:text="TASKS"
         android:textAppearance="@style/TextAppearance.AppCompat.Display3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -171,7 +181,7 @@
         android:id="@+id/textview_task1_tasks"
         android:layout_width="94dp"
         android:layout_height="28dp"
-        android:text="TextView"
+        android:text="Task 1"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -185,7 +195,7 @@
         android:id="@+id/textview_task2_tasks"
         android:layout_width="94dp"
         android:layout_height="28dp"
-        android:text="TextView"
+        android:text="Task 2"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

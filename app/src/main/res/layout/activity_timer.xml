@@ -5,42 +5,82 @@
     android:id="@+id/screen_timer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#606E87"
     tools:context=".Timer">
 
     <TextView
         android:id="@+id/textView_currenttask"
         android:layout_width="311dp"
         android:layout_height="83dp"
-        android:text="TextView"
+        android:text="Current Task"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        tools:layout_editor_absoluteX="50dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.53"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.038"
+        tools:text="Current Task" />
+
+    <TextView
+        android:id="@+id/textView_currenttask2"
+        android:layout_width="324dp"
+        android:layout_height="135dp"
+        android:text="Other Tasks"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.609"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.82"
+        tools:text="Other Tasks" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="104dp"
-        tools:layout_editor_absoluteY="321dp"
+        android:text="Skip"
+        tools:layout_editor_absoluteX="53dp"
+        tools:layout_editor_absoluteY="320dp"
         tools:text="Skip" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="224dp"
-        tools:layout_editor_absoluteY="321dp"
+        android:text="Pause"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.468"
         tools:text="Pause" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        android:text="Reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.469"
+        tools:text="Reset" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="306dp"
-        android:layout_height="50dp"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="55dp"
-        tools:layout_editor_absoluteY="397dp"
+        android:layout_width="297dp"
+        android:layout_height="55dp"
+        android:text="Motivaltional Quote"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.582"
         tools:text="Motivaltional Quote" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

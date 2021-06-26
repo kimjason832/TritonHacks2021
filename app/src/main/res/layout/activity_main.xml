@@ -28,7 +28,7 @@
         android:id="@+id/button_start_main"
         android:layout_width="169dp"
         android:layout_height="51dp"
-        android:text="Button"
+        android:text="START"
         app:backgroundTint="#198C6868"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
