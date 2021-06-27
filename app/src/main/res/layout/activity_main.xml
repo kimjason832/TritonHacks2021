@@ -36,4 +36,86 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.95"
         tools:text="START" />
+
+    <TextView
+        android:id="@+id/textview_inspirtationalquote_main"
+        android:layout_width="330dp"
+        android:layout_height="49dp"
+        android:text='"One day we will be more creative, more productive and yet more relaxed." - Francesco Cirillo'
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.249" />
+
+    <TextView
+        android:id="@+id/textview_pomodoro_main"
+        android:layout_width="331dp"
+        android:layout_height="46dp"
+        android:text="Pomodoro Study Technique"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.675"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.386" />
+
+    <TextView
+        android:id="@+id/textview_step3_main"
+        android:layout_width="339dp"
+        android:layout_height="68dp"
+        android:fontFamily="monospace"
+        android:text="3. Take a break for a set amount of time"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.693" />
+
+    <TextView
+        android:id="@+id/textview_step2_main"
+        android:layout_width="362dp"
+        android:layout_height="63dp"
+        android:fontFamily="monospace"
+        android:text="2. Work for a set amount of time"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.816"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.574" />
+
+    <TextView
+        android:id="@+id/textview_step4_main"
+        android:layout_width="328dp"
+        android:layout_height="88dp"
+        android:fontFamily="monospace"
+        android:text="4. Repeat steps 2 and 3 for a certain amount of rounds"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.847" />
+
+    <TextView
+        android:id="@+id/textview_step1_main"
+        android:layout_width="345dp"
+        android:layout_height="34dp"
+        android:fontFamily="monospace"
+        android:text="1. Create a list of tasks"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.606"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.483" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
