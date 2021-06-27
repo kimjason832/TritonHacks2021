@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -28,6 +29,21 @@ public class Timer extends AppCompatActivity {
     int minDelay;
     String[] possibleQuotes;
 
+    //timer variables
+    TextView countdown;
+    Button pause;
+    Button reset;
+    boolean isTimerRunning;
+    CountDownTimer countDownTimer;
+    long timeStart;
+    long timeLeft=timeStart;
+    static long lastTimeStop;
+    static long lastTimeStart;
+
+
+
+
+
 
 
     @Override
@@ -35,10 +51,63 @@ public class Timer extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_timer);
 
+        Intent i=getIntent(); //retrieving information from the previous activity
+
         backButton=findViewById(R.id.button_back_timer);
         homeButton=findViewById(R.id.button_home_timer);
         currentTask=findViewById(R.id.textview_currenttask_timer);
         motQuote=findViewById(R.id.textview_motivationalquote_timer);
+
+        //countdown setup
+//        System.out.println(i.getStringExtra("studyValue1"));
+
+        try {
+            timeStart= Long.parseLong(i.getStringExtra("studyValue1"))*60000;
+
+        }catch(Exception e){
+            timeLeft=lastTimeStop;
+            timeStart=lastTimeStart;
+
+        }
+
+
+
+
+        countdown=findViewById(R.id.text_view_countdown);
+        pause=findViewById(R.id.button_pause_timer);
+        reset=findViewById(R.id.button_reset_timer);
+
+
+
+        resetTimer();
+        //timeLeft=lastTimeStop;
+        startTimer();
+
+
+        //when pause is clicked
+        pause.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if(isTimerRunning){ //if pause is displayed, then run method pause timer
+                    pauseTimer();
+                }else{ //run start timer
+                    startTimer();
+                }
+
+            }
+        });
+
+        reset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                resetTimer();
+            }
+        });
+
+        updateCountDownText(); // end of countdown setup
+
 
 
         try {
@@ -60,9 +129,9 @@ public class Timer extends AppCompatActivity {
 
 
 
-        Intent i= new Intent();
 
-        currentTask.setText(i.getStringExtra("task1"));
+
+        //currentTask.setText(i.getStringExtra("task1"));
 
 
 
@@ -81,6 +150,8 @@ public class Timer extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent=new Intent(Timer.this, Tasks.class);
                 startActivity(intent);
+                lastTimeStop=timeLeft;
+                lastTimeStart=timeStart;
             }
         });
         homeButton.setOnClickListener(new View.OnClickListener() {
@@ -104,6 +175,48 @@ public class Timer extends AppCompatActivity {
         {
             possibleQuotes[i]=dataset.get(i)[0];
         }
+    }
+    private void startTimer(){
+        countDownTimer=new CountDownTimer(timeLeft,1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                timeLeft=millisUntilFinished;
+                updateCountDownText();
+            }
+
+            @Override
+            public void onFinish() { //when timer is finished, the pause button is changed to start and only the reset is visible
+                isTimerRunning=false;
+                pause.setText("start");
+                pause.setVisibility(View.INVISIBLE);
+                reset.setVisibility(View.VISIBLE);
+
+            }
+        }.start();
+        isTimerRunning=true;
+        pause.setText("pause");
+        reset.setVisibility(View.INVISIBLE);
+    }
+    private void pauseTimer()
+    {
+        countDownTimer.cancel();
+        isTimerRunning=false;
+        pause.setText("start");
+        reset.setVisibility(View.VISIBLE);
+    }
+    private void resetTimer(){
+        timeLeft=timeStart;
+        updateCountDownText();
+        reset.setVisibility(View.INVISIBLE);
+        pause.setVisibility(View.VISIBLE);
+    }
+    private void updateCountDownText()
+    {
+        int minutes=(int) (timeLeft/1000)/60;
+        int seconds=(int) (timeLeft/1000)%60;
+
+        String timeLeftFormatted=String.format(Locale.getDefault(),"%02d:%02d",minutes,seconds);
+        countdown.setText(timeLeftFormatted);
     }
 
 
