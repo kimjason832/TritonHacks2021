@@ -32,7 +32,7 @@ public class Timer extends AppCompatActivity {
 
         backButton=findViewById(R.id.button_back_timer);
         homeButton=findViewById(R.id.button_home_timer);
-        currentTask=findViewById(R.id.input_task1_tasks);
+        currentTask=findViewById(R.id.textview_currenttask_timer);
         motQuote=findViewById(R.id.textview_motivationalquote_timer);
 
 //        File file= new File();
@@ -48,6 +48,7 @@ public class Timer extends AppCompatActivity {
 
 
         Intent i= new Intent();
+
         currentTask.setText(i.getStringExtra("task1"));
 
 
@@ -59,7 +60,7 @@ public class Timer extends AppCompatActivity {
 //
 //        }
 
-        currentTask.setText(i.getStringExtra("task2"));
+
 
 
         backButton.setOnClickListener(new View.OnClickListener() {
