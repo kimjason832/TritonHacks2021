@@ -6,12 +6,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class Timer extends AppCompatActivity {
 
     Button backButton;
     Button homeButton;
-
+    TextView currentTask;
+    TextView otherTasks;
 
 
     @Override
@@ -21,6 +23,7 @@ public class Timer extends AppCompatActivity {
 
         backButton=findViewById(R.id.button_back_timer);
         homeButton=findViewById(R.id.button_home_timer);
+
 
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,6 +39,7 @@ public class Timer extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
 
 
     }
