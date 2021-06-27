@@ -9,7 +9,11 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import java.io.File;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.*;
+import com.opencsv.CSVReader;
+
 
 
 
@@ -22,6 +26,7 @@ public class Timer extends AppCompatActivity {
     TextView otherTasks;
     TextView motQuote;
     int minDelay;
+    String[] possibleQuotes;
 
 
 
@@ -35,22 +40,19 @@ public class Timer extends AppCompatActivity {
         currentTask=findViewById(R.id.textview_currenttask_timer);
         motQuote=findViewById(R.id.textview_motivationalquote_timer);
 
-        File file= new File("studyquotes.csv");
-        String string= "";
-        try {
-            Scanner sc= new Scanner(file);
-            while(sc.hasNextLine())
-            {
-                string+=sc.nextLine()+",";
-            }
 
-        }catch(Exception e){
+        try {
+            readData();
+        }catch(Exception e)
+        {
 
         }
-        String[] possibleQuotes= string.split(",");
+
+
+
+
 
         int quoteChosen= (int)(Math.random()*possibleQuotes.length);
-        System.out.println(possibleQuotes[quoteChosen]+"hi");
         motQuote.setText(possibleQuotes[quoteChosen]);
 
 
@@ -92,5 +94,17 @@ public class Timer extends AppCompatActivity {
 
 
     }
+    public void readData() throws IOException
+    {
+        //reads the csv file
+        CSVReader reader = new CSVReader(new InputStreamReader(getResources().openRawResource(R.raw.studyquotes)));
+        List<String[]> dataset = reader.readAll();
+        possibleQuotes= new String[dataset.size()];
+        for(int i=0;i<dataset.size();i++)
+        {
+            possibleQuotes[i]=dataset.get(i)[0];
+        }
+    }
+
 
 }
