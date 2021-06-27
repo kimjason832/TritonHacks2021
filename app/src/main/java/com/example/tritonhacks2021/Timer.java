@@ -42,6 +42,9 @@ public class Timer extends AppCompatActivity {
     long timeLeft=timeStart;
     static long lastTimeStop;
     static long lastTimeStart;
+    long timeBreak;
+    long timeBreakLeft=timeBreak;
+    static long timeBreakStop;
 
 
 
@@ -117,11 +120,10 @@ public class Timer extends AppCompatActivity {
             setTimer();
         }
 
-
-
-
-
         startTimer();
+
+
+
 
 
         //when pause is clicked
@@ -147,6 +149,7 @@ public class Timer extends AppCompatActivity {
         });
 
         updateCountDownText(); // end of countdown setup
+
 
 
 
