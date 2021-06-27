@@ -126,7 +126,7 @@ public class Timer extends AppCompatActivity {
             }
 
             System.out.println(timeBreak+" +" +timeStudy);
-
+            resetTimer();
             //resetTimer(); //TODO mdco modm o
         }catch(Exception e){
             timeLeft=lastTimeStop;
@@ -135,30 +135,23 @@ public class Timer extends AppCompatActivity {
         }
 
        // startTimer();
-        loopTimes=3;
+        loopTimes=6;
         //for(int inc=0;inc<loopTimes;inc++)
-        {
-            if(timeLeft==lastTimeStop&&timeLeft!=0)
-            {
-                System.out.println("exit and back");
-            }
-            else if(isBreak==false)
-            {
+//        {
+//else if(isBreak==false)
+////            {
                 timeStart= timeStudy;
-
-                System.out.println("x");
-
-            }else{
-                timeStart=timeBreak;
-                System.out.println("y");
-            }
+//
+////            }
+//
             System.out.println(timeStart);
+
             resetTimer();
             startTimer();
 
-            isBreak=!isBreak;
+
             System.out.println("ran");
-        }
+//        }
 
 //        while(isTimerRunning==true)
 //        {
@@ -291,10 +284,31 @@ public class Timer extends AppCompatActivity {
 
             @Override
             public void onFinish() { //when timer is finished, the pause button is changed to start and only the reset is visible
-                isTimerRunning=false;
-                pause.setText("start");
-                pause.setVisibility(View.INVISIBLE);
-                reset.setVisibility(View.VISIBLE);
+                if(loopTimes==0) {
+
+                    isTimerRunning = false;
+                    pause.setText("start");
+                    pause.setVisibility(View.INVISIBLE);
+                    reset.setVisibility(View.VISIBLE);
+                }else{
+
+
+                    if(isBreak==false)
+                    {
+                        timeStart= timeStudy;
+
+                        System.out.println("x");
+                        loopTimes--;
+                    }else{
+                        timeStart=timeBreak;
+                        System.out.println("y");
+                    }
+
+                    resetTimer();
+                    startTimer();
+                    isBreak=!isBreak;
+
+                }
 
             }
         }.start();
