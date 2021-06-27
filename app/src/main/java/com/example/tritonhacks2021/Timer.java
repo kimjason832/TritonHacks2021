@@ -8,12 +8,21 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.io.File;
+import java.util.*;
+
+
+
+
 public class Timer extends AppCompatActivity {
 
     Button backButton;
     Button homeButton;
     TextView currentTask;
     TextView otherTasks;
+    TextView motQuote;
+    int minDelay;
+
 
 
     @Override
@@ -23,6 +32,34 @@ public class Timer extends AppCompatActivity {
 
         backButton=findViewById(R.id.button_back_timer);
         homeButton=findViewById(R.id.button_home_timer);
+        currentTask=findViewById(R.id.input_task1_tasks);
+        motQuote=findViewById(R.id.textview_motivationalquote_timer);
+
+//        File file= new File();
+//        Scanner sc= new Scanner(file);
+//        String string= "";
+//        while(sc.hasNextLine())
+//        {
+//            string+=sc.nextLine()+",";
+//        }
+//        string.split();
+
+
+
+
+        Intent i= new Intent();
+        currentTask.setText(i.getStringExtra("task1"));
+
+
+
+//        minDelay=Integer.parseInt(i.getStringExtra());
+//        try{
+//            Thread.sleep(minDelay*60000);
+//        }catch(Exception e){
+//
+//        }
+
+        currentTask.setText(i.getStringExtra("task2"));
 
 
         backButton.setOnClickListener(new View.OnClickListener() {

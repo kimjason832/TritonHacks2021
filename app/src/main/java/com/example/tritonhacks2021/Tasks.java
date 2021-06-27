@@ -19,6 +19,8 @@ public class Tasks extends AppCompatActivity {
     TextInputEditText taskThree;
     TextInputEditText taskFour;
     TextInputEditText taskFive;
+    String studyValue;
+    String breakValues;
 
 
     @Override
@@ -34,6 +36,10 @@ public class Tasks extends AppCompatActivity {
         taskFour=findViewById(R.id.input_task4_tasks);
         taskFive=findViewById(R.id.input_task5_tasks);
 
+        Intent i= new Intent();
+        studyValue= i.getStringExtra("studyValue");
+        breakValues= i.getStringExtra("breakValue");
+
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,6 +49,8 @@ public class Tasks extends AppCompatActivity {
                 intent.putExtra("task3", taskThree.getText());
                 intent.putExtra("task4", taskFour.getText());
                 intent.putExtra("task5", taskFive.getText());
+                intent.putExtra("studyValue1",studyValue);
+                intent.putExtra("breakValue1",breakValues);
 
                 startActivity(intent);
             }
