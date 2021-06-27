@@ -120,20 +120,4 @@
         app:layout_constraintVertical_bias="0.961"
         tools:text="Home" />
 
-    <Button
-        android:id="@+id/button_back_timer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Back"
-        android:background="@drawable/roundstyle"
-        android:padding="10dp"
-        app:backgroundTint="#7551e0"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.226"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.961"
-        tools:text="Back" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

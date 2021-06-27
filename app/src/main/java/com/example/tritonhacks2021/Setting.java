@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.SeekBar;
@@ -21,6 +22,8 @@ public class Setting extends AppCompatActivity {
     Spinner themeSpinner;
     TextView studyTimeBox;
     TextView breakTimeBox;
+    String rounds;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +51,19 @@ public class Setting extends AppCompatActivity {
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         themeSpinner.setAdapter(ab);
 
+        roundsSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                rounds= parent.getItemAtPosition(position).toString();
+
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
         studyTime.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
@@ -99,6 +115,7 @@ public class Setting extends AppCompatActivity {
                 Intent intent=new Intent(Setting.this, Tasks.class);
                 intent.putExtra("studyValue",studyTimeBox.getText());
                 intent.putExtra("breakValue",breakTimeBox.getText());
+                intent.putExtra("rounds",rounds);
                 startActivity(intent);
 
             }

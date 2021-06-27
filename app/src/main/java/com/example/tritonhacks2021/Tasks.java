@@ -21,6 +21,7 @@ public class Tasks extends AppCompatActivity {
     TextInputEditText taskFive;
     String studyValue;
     String breakValues;
+    String rounds;
 
 
     @Override
@@ -39,6 +40,7 @@ public class Tasks extends AppCompatActivity {
         Intent i= getIntent();
         studyValue= i.getStringExtra("studyValue");
         breakValues= i.getStringExtra("breakValue");
+        rounds=i.getStringExtra("rounds");
 
 
         nextButton.setOnClickListener(new View.OnClickListener() {
@@ -52,6 +54,7 @@ public class Tasks extends AppCompatActivity {
                 intent.putExtra("task5", taskFive.getText().toString());
                 intent.putExtra("studyValue1",studyValue);
                 intent.putExtra("breakValue1",breakValues);
+                intent.putExtra("rounds1",rounds);
 
                 startActivity(intent);
             }

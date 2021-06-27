@@ -21,7 +21,7 @@ import com.opencsv.CSVReader;
 
 public class Timer extends AppCompatActivity {
 
-    Button backButton;
+
     Button homeButton;
     TextView currentTask;
     TextView otherTasks;
@@ -61,7 +61,7 @@ public class Timer extends AppCompatActivity {
 
         Intent i=getIntent(); //retrieving information from the previous activity
 
-        backButton=findViewById(R.id.button_back_timer);
+
         homeButton=findViewById(R.id.button_home_timer);
         currentTask=findViewById(R.id.textview_currenttask_timer);
         motQuote=findViewById(R.id.textview_motivationalquote_timer);
@@ -125,9 +125,9 @@ public class Timer extends AppCompatActivity {
                 timeBreak+=1000;
             }
 
-            System.out.println(timeBreak+" +" +timeStudy);
+           // System.out.println(timeBreak+" +" +timeStudy);
             resetTimer();
-            //resetTimer(); //TODO mdco modm o
+            //resetTimer();
         }catch(Exception e){
             timeLeft=lastTimeStop;
             timeStart=lastTimeStart;
@@ -135,7 +135,8 @@ public class Timer extends AppCompatActivity {
         }
 
        // startTimer();
-        loopTimes=6;
+        loopTimes=Integer.parseInt(i.getStringExtra("rounds1"));
+        //System.out.println(loopTimes);
         //for(int inc=0;inc<loopTimes;inc++)
 //        {
 //else if(isBreak==false)
@@ -144,13 +145,12 @@ public class Timer extends AppCompatActivity {
 //
 ////            }
 //
-            System.out.println(timeStart);
 
             resetTimer();
             startTimer();
 
 
-            System.out.println("ran");
+
 //        }
 
 //        while(isTimerRunning==true)
@@ -228,15 +228,7 @@ public class Timer extends AppCompatActivity {
 
 
 
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(Timer.this, Tasks.class);
-                startActivity(intent);
-                lastTimeStop=timeLeft;
-                lastTimeStart=timeStart;
-            }
-        });
+
         homeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -297,11 +289,11 @@ public class Timer extends AppCompatActivity {
                     {
                         timeStart= timeStudy;
 
-                        System.out.println("x");
+
                         loopTimes--;
                     }else{
                         timeStart=timeBreak;
-                        System.out.println("y");
+
                     }
 
                     resetTimer();
