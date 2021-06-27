@@ -43,8 +43,10 @@ public class Timer extends AppCompatActivity {
     static long lastTimeStop;
     static long lastTimeStart;
     long timeBreak;
-    long timeBreakLeft=timeBreak;
-    static long timeBreakStop;
+    long timeStudy;
+    static boolean isBreak;
+    static int loopTimes;
+
 
 
 
@@ -112,15 +114,60 @@ public class Timer extends AppCompatActivity {
         pause=findViewById(R.id.button_pause_timer);
         reset=findViewById(R.id.button_reset_timer);
         try {
-            timeStart= Long.parseLong(i.getStringExtra("studyValue1"))*60000;
-            resetTimer();
+
+            timeStudy= Long.parseLong(i.getStringExtra("studyValue1"))*60000;
+            timeBreak= Long.parseLong(i.getStringExtra("breakValue1"))*60000;
+            if(timeStudy==0){
+                timeStudy+=1000;
+            }
+            if(timeBreak==0)
+            {
+                timeBreak+=1000;
+            }
+
+            System.out.println(timeBreak+" +" +timeStudy);
+
+            //resetTimer(); //TODO mdco modm o
         }catch(Exception e){
             timeLeft=lastTimeStop;
             timeStart=lastTimeStart;
             setTimer();
         }
 
-        startTimer();
+       // startTimer();
+        loopTimes=3;
+        //for(int inc=0;inc<loopTimes;inc++)
+        {
+            if(timeLeft==lastTimeStop&&timeLeft!=0)
+            {
+                System.out.println("exit and back");
+            }
+            else if(isBreak==false)
+            {
+                timeStart= timeStudy;
+
+                System.out.println("x");
+
+            }else{
+                timeStart=timeBreak;
+                System.out.println("y");
+            }
+            System.out.println(timeStart);
+            resetTimer();
+            startTimer();
+
+            isBreak=!isBreak;
+            System.out.println("ran");
+        }
+
+//        while(isTimerRunning==true)
+//        {
+//
+//        }
+
+
+
+
 
 
 
