@@ -35,14 +35,25 @@ public class Timer extends AppCompatActivity {
         currentTask=findViewById(R.id.textview_currenttask_timer);
         motQuote=findViewById(R.id.textview_motivationalquote_timer);
 
-//        File file= new File();
-//        Scanner sc= new Scanner(file);
-//        String string= "";
-//        while(sc.hasNextLine())
-//        {
-//            string+=sc.nextLine()+",";
-//        }
-//        string.split();
+        File file= new File("studyquotes.csv");
+        String string= "";
+        try {
+            Scanner sc= new Scanner(file);
+            while(sc.hasNextLine())
+            {
+                string+=sc.nextLine()+",";
+            }
+
+        }catch(Exception e){
+
+        }
+        String[] possibleQuotes= string.split(",");
+
+        int quoteChosen= (int)(Math.random()*possibleQuotes.length);
+        System.out.println(possibleQuotes[quoteChosen]+"hi");
+        motQuote.setText(possibleQuotes[quoteChosen]);
+
+
 
 
 
