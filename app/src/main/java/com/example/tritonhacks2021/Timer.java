@@ -28,6 +28,9 @@ public class Timer extends AppCompatActivity {
     TextView motQuote;
     int minDelay;
     String[] possibleQuotes;
+    Button nextTask;
+    String[] tasks;
+    int taskCounter;
 
     //timer variables
     TextView countdown;
@@ -57,30 +60,62 @@ public class Timer extends AppCompatActivity {
         homeButton=findViewById(R.id.button_home_timer);
         currentTask=findViewById(R.id.textview_currenttask_timer);
         motQuote=findViewById(R.id.textview_motivationalquote_timer);
+        nextTask=findViewById(R.id.button_skip_timer);
 
-        //countdown setup
-//        System.out.println(i.getStringExtra("studyValue1"));
 
-        try {
-            timeStart= Long.parseLong(i.getStringExtra("studyValue1"))*60000;
+        tasks=new String[5];
+        taskCounter=1;
 
-        }catch(Exception e){
-            timeLeft=lastTimeStop;
-            timeStart=lastTimeStart;
-
+        if(i.getStringExtra("task1")==null){
+            tasks[0]=null;
+        }else{
+            tasks[0]=i.getStringExtra("task1");
+        }
+        if(i.getStringExtra("task2")==null){
+            tasks[1]=null;
+        }else{
+            tasks[1]=i.getStringExtra("task2");
+        }
+        if(i.getStringExtra("task3")==null){
+            tasks[2]=null;
+        }else{
+            tasks[2]=i.getStringExtra("task3");
+        }
+        if(i.getStringExtra("task4")==null){
+            tasks[3]=null;
+        }else{
+            tasks[3]=i.getStringExtra("task4");
+        }
+        if(i.getStringExtra("task5")==null){
+            tasks[4]=null;
+        }else{
+            tasks[4]=i.getStringExtra("task5");
         }
 
 
 
 
+
+
+
+        //countdown setup
+//        System.out.println(i.getStringExtra("studyValue1"));
         countdown=findViewById(R.id.text_view_countdown);
         pause=findViewById(R.id.button_pause_timer);
         reset=findViewById(R.id.button_reset_timer);
+        try {
+            timeStart= Long.parseLong(i.getStringExtra("studyValue1"))*60000;
+            resetTimer();
+        }catch(Exception e){
+            timeLeft=lastTimeStop;
+            timeStart=lastTimeStart;
+            setTimer();
+        }
 
 
 
-        resetTimer();
-        //timeLeft=lastTimeStop;
+
+
         startTimer();
 
 
@@ -162,6 +197,21 @@ public class Timer extends AppCompatActivity {
             }
         });
 
+        nextTask.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    currentTask.setText(tasks[taskCounter]);
+                    taskCounter++;
+                }
+                catch(Exception e){
+                    currentTask.setText("End of your tasks!");
+                }
+
+            }
+        });
+
+
 
 
     }
@@ -196,6 +246,13 @@ public class Timer extends AppCompatActivity {
         isTimerRunning=true;
         pause.setText("pause");
         reset.setVisibility(View.INVISIBLE);
+    }
+    private void setTimer()
+    {
+        timeLeft=lastTimeStop;
+        updateCountDownText();
+        reset.setVisibility(View.INVISIBLE);
+        pause.setVisibility(View.VISIBLE);
     }
     private void pauseTimer()
     {
