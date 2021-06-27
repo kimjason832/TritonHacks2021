@@ -45,11 +45,11 @@ public class Tasks extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(Tasks.this,Timer.class);
-                intent.putExtra("task1", taskOne.getText());
-                intent.putExtra("task2", taskTwo.getText());
-                intent.putExtra("task3", taskThree.getText());
-                intent.putExtra("task4", taskFour.getText());
-                intent.putExtra("task5", taskFive.getText());
+                intent.putExtra("task1", taskOne.getText().toString());
+                intent.putExtra("task2", taskTwo.getText().toString());
+                intent.putExtra("task3", taskThree.getText().toString());
+                intent.putExtra("task4", taskFour.getText().toString());
+                intent.putExtra("task5", taskFive.getText().toString());
                 intent.putExtra("studyValue1",studyValue);
                 intent.putExtra("breakValue1",breakValues);
 

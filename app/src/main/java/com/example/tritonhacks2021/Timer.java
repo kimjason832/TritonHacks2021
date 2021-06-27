@@ -63,35 +63,40 @@ public class Timer extends AppCompatActivity {
         nextTask=findViewById(R.id.button_skip_timer);
 
 
+
+
         tasks=new String[5];
         taskCounter=1;
 
-        if(i.getStringExtra("task1")==null){
+
+        if(i.getStringExtra("task1").equals("Enter a task")){
             tasks[0]=null;
         }else{
             tasks[0]=i.getStringExtra("task1");
         }
-        if(i.getStringExtra("task2")==null){
+        if(i.getStringExtra("task2").equals("Enter a task")){
             tasks[1]=null;
         }else{
             tasks[1]=i.getStringExtra("task2");
         }
-        if(i.getStringExtra("task3")==null){
+        if(i.getStringExtra("task3").equals("Enter a task")){
             tasks[2]=null;
         }else{
             tasks[2]=i.getStringExtra("task3");
         }
-        if(i.getStringExtra("task4")==null){
+        if(i.getStringExtra("task4").equals("Enter a task")){
             tasks[3]=null;
         }else{
             tasks[3]=i.getStringExtra("task4");
         }
-        if(i.getStringExtra("task5")==null){
+        if(i.getStringExtra("task5").equals("Enter a task")){
             tasks[4]=null;
         }else{
             tasks[4]=i.getStringExtra("task5");
         }
+        //System.out.println(Arrays.toString(tasks));
 
+        currentTask.setText(tasks[0]);
 
 
 
