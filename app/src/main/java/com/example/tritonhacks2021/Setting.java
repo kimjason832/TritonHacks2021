@@ -46,7 +46,7 @@ public class Setting extends AppCompatActivity {
         roundsSpinner.setAdapter(aa);
 
         //"Christmas","Blizzard","Space","Spring","Forest"
-        String[] themesChoices={"Default","Red","Green","Black", "Orange","Pink"};
+        String[] themesChoices={"Default","Red","Green","Black", "Orange","Pink","Tzuching"};
         ArrayAdapter ab=new ArrayAdapter(this, android.R.layout.simple_spinner_item,themesChoices);
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         themeSpinner.setAdapter(ab);
