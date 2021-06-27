@@ -70,7 +70,7 @@ public class Setting extends AppCompatActivity {
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
 
                 breakTimeBox.setText(String.valueOf(progress));
-                
+
             }
 
             @Override
@@ -96,7 +96,10 @@ public class Setting extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(Setting.this, Tasks.class);
+                intent.putExtra("studyValue",studyTimeBox.getText());
+                intent.putExtra("breakValue",breakTimeBox.getText());
                 startActivity(intent);
+
             }
         });
     }

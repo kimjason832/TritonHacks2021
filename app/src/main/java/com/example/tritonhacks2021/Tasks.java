@@ -6,11 +6,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class Tasks extends AppCompatActivity {
 
     Button nextButton;
     Button backButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +28,9 @@ public class Tasks extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+
 
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
