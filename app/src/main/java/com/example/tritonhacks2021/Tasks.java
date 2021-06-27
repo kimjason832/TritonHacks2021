@@ -22,7 +22,7 @@ public class Tasks extends AppCompatActivity {
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Tasks.this,Setting.class);
+                Intent intent=new Intent(Tasks.this,Timer.class);
                 startActivity(intent);
             }
         });
@@ -30,7 +30,7 @@ public class Tasks extends AppCompatActivity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Tasks.this, Timer.class);
+                Intent intent=new Intent(Tasks.this, Setting.class);
                 startActivity(intent);
             }
         });
