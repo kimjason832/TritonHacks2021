@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 public class Setting extends AppCompatActivity {
 
@@ -18,6 +19,8 @@ public class Setting extends AppCompatActivity {
     SeekBar studyTime;
     SeekBar breakTime;
     Spinner themeSpinner;
+    TextView studyTimeBox;
+    TextView breakTimeBox;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +33,8 @@ public class Setting extends AppCompatActivity {
         studyTime= findViewById(R.id.seekbar_studytime_setting);
         breakTime=findViewById(R.id.seekbar_breaktime_setting);
         themeSpinner=findViewById(R.id.spinner_theme_setting);
+        studyTimeBox=findViewById(R.id.textview_study_setting);
+        breakTimeBox=findViewById(R.id.textview_break_setting);
 
         //setting the spinner
         String[] roundsChoices={"1","2","3","4","5"};
@@ -45,7 +50,8 @@ public class Setting extends AppCompatActivity {
         studyTime.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-
+                progress=10*progress;
+                studyTimeBox.setText(String.valueOf(progress));
             }
 
             @Override
@@ -63,6 +69,8 @@ public class Setting extends AppCompatActivity {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
 
+                breakTimeBox.setText(String.valueOf(progress));
+                
             }
 
             @Override

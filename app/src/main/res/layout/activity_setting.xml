@@ -162,7 +162,7 @@
         tools:text="10" />
 
     <TextView
-        android:id="@+id/textview_study_setting2"
+        android:id="@+id/textview_break_setting"
         android:layout_width="76dp"
         android:layout_height="41dp"
         android:text="1"
