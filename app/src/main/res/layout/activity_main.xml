@@ -10,8 +10,8 @@
 
     <ImageView
         android:id="@+id/imageview_darkstar5"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
+        android:layout_width="48dp"
+        android:layout_height="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.098"
@@ -22,8 +22,8 @@
 
     <ImageView
         android:id="@+id/imageview_darkstar4"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
+        android:layout_width="42dp"
+        android:layout_height="35dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.879"
@@ -163,8 +163,8 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
+        android:layout_width="34dp"
+        android:layout_height="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.112"
@@ -175,8 +175,8 @@
 
     <ImageView
         android:id="@+id/imageview_darkstar2"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
+        android:layout_width="30dp"
+        android:layout_height="35dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.828"
@@ -187,8 +187,8 @@
 
     <ImageView
         android:id="@+id/imageview_darkstar3"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.252"
