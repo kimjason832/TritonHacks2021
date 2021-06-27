@@ -35,6 +35,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.95"
+        app:rippleColor="#FFFFFF"
         tools:text="START" />
 
     <TextView
@@ -42,6 +43,7 @@
         android:layout_width="330dp"
         android:layout_height="49dp"
         android:text='"One day we will be more creative, more productive and yet more relaxed." - Francesco Cirillo'
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.432"
@@ -55,6 +57,7 @@
         android:layout_height="46dp"
         android:text="Pomodoro Study Technique"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.675"
@@ -69,6 +72,7 @@
         android:fontFamily="monospace"
         android:text="3. Take a break for a set amount of time"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.555"
@@ -83,6 +87,7 @@
         android:fontFamily="monospace"
         android:text="2. Work for a set amount of time"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.816"
@@ -97,6 +102,7 @@
         android:fontFamily="monospace"
         android:text="4. Repeat steps 2 and 3 for a certain amount of rounds"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.481"
@@ -111,6 +117,7 @@
         android:fontFamily="monospace"
         android:text="1. Create a list of tasks"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.606"
