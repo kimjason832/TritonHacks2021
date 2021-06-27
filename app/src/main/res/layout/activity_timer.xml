@@ -108,16 +108,16 @@
         android:id="@+id/button_home_timer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Home"
         android:background="@drawable/roundstyle"
         android:padding="10dp"
+        android:text="Home"
         app:backgroundTint="#7551e0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.721"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.961"
+        app:layout_constraintVertical_bias="0.952"
         tools:text="Home" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
