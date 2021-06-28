@@ -23,6 +23,7 @@ public class Setting extends AppCompatActivity {
     TextView studyTimeBox;
     TextView breakTimeBox;
     String rounds;
+    String theme;
 
 
     @Override
@@ -46,11 +47,22 @@ public class Setting extends AppCompatActivity {
         roundsSpinner.setAdapter(aa);
 
         //"Christmas","Blizzard","Space","Spring","Forest"
-        String[] themesChoices={"Default","Red","Green","Black", "Orange","Pink","Tzuching"};
+        String[] themesChoices={"Default","Red","Green","Black", "magenta","Tzuching"};
         ArrayAdapter ab=new ArrayAdapter(this, android.R.layout.simple_spinner_item,themesChoices);
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         themeSpinner.setAdapter(ab);
 
+        themeSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                theme=parent.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
         roundsSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -116,6 +128,7 @@ public class Setting extends AppCompatActivity {
                 intent.putExtra("studyValue",studyTimeBox.getText());
                 intent.putExtra("breakValue",breakTimeBox.getText());
                 intent.putExtra("rounds",rounds);
+                intent.putExtra("theme",theme);
                 startActivity(intent);
 
             }

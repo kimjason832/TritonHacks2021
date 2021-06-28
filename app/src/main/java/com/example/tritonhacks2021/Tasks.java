@@ -22,6 +22,7 @@ public class Tasks extends AppCompatActivity {
     String studyValue;
     String breakValues;
     String rounds;
+    String theme;
 
 
     @Override
@@ -41,6 +42,7 @@ public class Tasks extends AppCompatActivity {
         studyValue= i.getStringExtra("studyValue");
         breakValues= i.getStringExtra("breakValue");
         rounds=i.getStringExtra("rounds");
+        theme=i.getStringExtra("theme");
 
 
         nextButton.setOnClickListener(new View.OnClickListener() {
@@ -55,6 +57,7 @@ public class Tasks extends AppCompatActivity {
                 intent.putExtra("studyValue1",studyValue);
                 intent.putExtra("breakValue1",breakValues);
                 intent.putExtra("rounds1",rounds);
+                intent.putExtra("theme1",theme);
 
                 startActivity(intent);
             }

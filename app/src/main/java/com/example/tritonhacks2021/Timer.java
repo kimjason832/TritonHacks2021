@@ -1,8 +1,10 @@
 package com.example.tritonhacks2021;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
@@ -31,6 +33,7 @@ public class Timer extends AppCompatActivity {
     Button nextTask;
     String[] tasks;
     int taskCounter;
+    ConstraintLayout background;
 
     //timer variables
     TextView countdown;
@@ -67,11 +70,34 @@ public class Timer extends AppCompatActivity {
         motQuote=findViewById(R.id.textview_motivationalquote_timer);
         nextTask=findViewById(R.id.button_skip_timer);
 
+        background=findViewById(R.id.screen_timer);
 
 
 
         tasks=new String[5];
         taskCounter=1;
+
+
+        String color= i.getStringExtra("theme1");
+        System.out.println(color);
+        int colors=Color.DKGRAY;
+        if(color.equalsIgnoreCase("red"))
+        {
+            colors=Color.RED;
+        }if(color.equalsIgnoreCase("Green"))
+        {
+            colors=Color.GREEN;
+        }if(color.equalsIgnoreCase("Black"))
+        {
+            colors=Color.BLACK;
+        }if(color.equalsIgnoreCase("magenta"))
+        {
+            colors=Color.MAGENTA;
+        }if(color.equalsIgnoreCase("Tzuching"))
+        {
+            colors=Color.YELLOW;
+        }
+        background.setBackgroundColor(colors);;
 
 
         if(i.getStringExtra("task1").equals("Enter a task")){
